@@ -1,4 +1,5 @@
-fastapi>=0.110
-uvicorn[standard]>=0.29
-python-multipart>=0.0.9
+# El sitio web NO necesita instalar nada: corre 100% en el navegador con
+# Pyodide, que descarga pypdf por su cuenta. Estas dependencias son solo para
+# ejecutar los tests del motor en local.
 pypdf>=4.2
+pytest>=8.0
