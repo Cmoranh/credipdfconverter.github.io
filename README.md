@@ -55,6 +55,7 @@ navegador.
 
 ```
 index.html      Interfaz web + arranque de Pyodide (entrada de GitHub Pages)
+CHANGELOG.md    Historial de versiones
 .nojekyll       Evita que Jekyll oculte archivos como engine/__init__.py
 engine/
   core.py       Extracción + reemplazo sobre el content stream
@@ -84,6 +85,14 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 pytest -q
 ```
+
+## Versiones
+
+Versión actual en `engine/__init__.py` (`__version__`) y en la cabecera de la
+web; el historial está en [`CHANGELOG.md`](CHANGELOG.md) y cada versión tiene
+su tag `vX.Y.Z`. Al publicar un cambio: subir la versión en los tres sitios
+(`feat` → menor, `fix`/`style` → parche), añadir la entrada al CHANGELOG y
+crear el tag.
 
 ## Publicar en GitHub Pages
 

@@ -1,5 +1,7 @@
 """Motor de edición de texto para Cartas de Libranza (sin almacenamiento)."""
 
+__version__ = "1.3.0"  # mantener igual que index.html y CHANGELOG.md
+
 from . import core
 from .core import extract_runs  # noqa: F401
 from .template import list_fields  # noqa: F401

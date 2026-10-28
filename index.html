@@ -34,6 +34,8 @@
   header h1 { font-size: 16px; margin: 0; font-weight: 700; color: var(--navy); letter-spacing: -.01em; }
   .titles .sub { font-size: 11px; color: var(--muted); font-weight: 500; }
   .titles .sub b { color: var(--brand); font-weight: 700; }
+  .titles .sub .version { color: var(--muted); text-decoration: none; font-variant-numeric: tabular-nums; }
+  .titles .sub .version:hover { color: var(--brand); text-decoration: underline; }
   .badge {
     font-size: 11px; color: var(--green-ink); background: var(--green-soft);
     border: 1px solid #d5e9b3; padding: 3px 10px; border-radius: 20px; font-weight: 500;
@@ -97,7 +99,7 @@
   </svg>
   <div class="titles">
     <h1>Editor de Carta de Libranza</h1>
-    <span class="sub">Banco <b>Bancrea</b> · herramienta interna</span>
+    <span class="sub">Banco <b>Bancrea</b> · herramienta interna · <a id="appVersion" class="version" href="https://github.com/Cmoranh/credipdfconverter.github.io/blob/main/CHANGELOG.md" target="_blank" rel="noopener" title="Ver cambios">v1.3.0</a></span>
   </div>
   <span class="badge">Todo en tu navegador · el PDF nunca se sube a ningún servidor</span>
   <span id="status"><span class="dot"></span><span id="statusText">Iniciando motor…</span></span>

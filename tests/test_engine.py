@@ -157,3 +157,12 @@ def test_scaled_layout():
     assert new["Nombre(s)"] == "PEDRO"
     assert new["Plazo"] == "48 meses"
     assert new["CURP"] == "XXXX000000XXXXXX00"
+
+
+def test_version_in_sync():
+    root = Path(__file__).parent.parent
+    html = (root / "index.html").read_text(encoding="utf-8")
+    changelog = (root / "CHANGELOG.md").read_text(encoding="utf-8")
+    assert 'id="appVersion"' in html
+    assert f">v{engine.__version__}</a>" in html
+    assert f"## {engine.__version__} " in changelog
